@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>柳瀬 大輝 | アプリ開発者</title>
+<meta name="description" content="アプリ開発者 柳瀬 大輝（Hiroki Yanase）のポートフォリオ。MYDO と Abduction Learning をつくっています。">
+<meta property="og:title" content="柳瀬 大輝 | アプリ開発者">
+<meta property="og:description" content="AI と身近なサービスをつなぐ、小さなウェブアプリをつくっています。">
+<meta property="og:url" content="https://yanasehiroki.github.io/">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;700&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap">
+
+  <header class="hero">
+    <p class="role">アプリ開発者 <span class="en">/ App Developer</span></p>
+    <h1>柳瀬 大輝<span class="en name-en">Hiroki Yanase</span></h1>
+    <p class="lead">AI と身近なサービスをつなぐ、小さなウェブアプリをつくっています。</p>
+    <p class="lead-en en">I build small web apps that bring AI into everyday tools.</p>
+  </header>
+
+  <section aria-labelledby="products-h">
+    <h2 id="products-h">製品 <span class="en">Products</span></h2>
+
+    <!-- 製品を足すときは <article class="product"> をまるごと複製して中身を書き換える -->
+    <div class="products">
+
+      <article class="product">
+        <img class="icon" src="images/mydo.png" alt="" width="96" height="96">
+        <div class="body">
+          <h3>MYDO</h3>
+          <p>Shopify ストアの LINE 接客で、AI が返信を下書きし、店主が確かめてから送るアプリ。</p>
+          <p class="en">A Shopify app: AI drafts replies to LINE messages, and the shop owner reviews them before sending.</p>
+          <ul class="tags">
+            <li>Shopify</li><li>LINE Messaging API</li><li>LLM・RAG</li><li>PostgreSQL</li><li>Fly.io</li>
+          </ul>
+          <p class="links"><a href="https://mydoai.com">mydoai.com</a></p>
+        </div>
+      </article>
+
+      <article class="product">
+        <img class="icon" src="images/abduction-learning.png" alt="" width="96" height="96">
+        <div class="body">
+          <h3>Abduction Learning</h3>
+          <p>例文を見比べて仮説を立て、確かめながら英語を学ぶ練習帳。今井むつみ『アブダクション英語学習法』の非公式ファンメイド。</p>
+          <p class="en">A workbook for learning English by comparing examples, forming hypotheses, and testing them. Unofficial fan-made.</p>
+          <ul class="tags">
+            <li>React</li><li>Vite</li><li>IndexedDB</li><li>LLM</li><li>Cloudflare Workers</li>
+          </ul>
+          <p class="links">
+            <a href="https://yanasehiroki.github.io/abduction-learning/">アプリを開く</a>
+            <a href="https://github.com/YanaseHiroki/abduction-learning">GitHub</a>
+          </p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section aria-labelledby="skills-h">
+    <h2 id="skills-h">得意な技術 <span class="en">Skills</span></h2>
+    <dl class="skills">
+      <div><dt>フロントエンド</dt><dd>TypeScript・React・Vite</dd></div>
+      <div><dt>サーバー・データ</dt><dd>Node.js・PostgreSQL・Prisma</dd></div>
+      <div><dt>AI</dt><dd>LLM（OpenAI・Anthropic・Gemini）・RAG</dd></div>
+      <div><dt>連携</dt><dd>Shopify アプリ・LINE Messaging API</dd></div>
+      <div><dt>運用</dt><dd>Fly.io・Cloudflare Workers</dd></div>
+    </dl>
+  </section>
+
+  <section aria-labelledby="contact-h">
+    <h2 id="contact-h">連絡先 <span class="en">Contact</span></h2>
+    <ul class="contact">
+      <li><span class="label">メール</span><a href="mailto:support@mydoai.com">support@mydoai.com</a></li>
+      <li><span class="label">X</span><a href="https://x.com/YanaseHiroki">@YanaseHiroki</a></li>
+      <li><span class="label">GitHub</span><a href="https://github.com/YanaseHiroki">YanaseHiroki</a></li>
+    </ul>
+  </section>
+
+  <footer class="foot">© 2026 Hiroki Yanase</footer>
+</main>
+</body>
+</html>

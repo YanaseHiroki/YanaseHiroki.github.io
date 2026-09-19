@@ -90,6 +90,25 @@
     </div>
   </section>
 
+  <section aria-labelledby="notes-h">
+    <div class="sec-head">
+      <h2 id="notes-h"><span data-l="ja">書いた記事</span><span data-l="en">Writing</span></h2>
+      <div class="carousel-nav" hidden>
+        <button type="button" class="nav-btn" data-dir="-1" aria-label="前の記事 / Previous">‹</button>
+        <button type="button" class="nav-btn" data-dir="1" aria-label="次の記事 / Next">›</button>
+      </div>
+    </div>
+    <p class="sec-note" data-l="ja">開発で突き当たった壁と、その越え方を note に書いています。</p>
+    <p class="sec-note" data-l="en">Notes on problems I hit while building, and how I solved them (in Japanese).</p>
+    <!-- 中身は notes.json から描く。notes.json は scripts/fetch-notes.mjs で書き出す -->
+    <ul class="notes" id="notes" aria-busy="true">
+      <li class="note-card skeleton" aria-hidden="true"></li>
+      <li class="note-card skeleton" aria-hidden="true"></li>
+      <li class="note-card skeleton" aria-hidden="true"></li>
+    </ul>
+    <p class="links more"><a href="https://note.com/yanasehiroki"><span data-l="ja">note で記事をすべて見る</span><span data-l="en">All articles on note</span> →</a></p>
+  </section>
+
   <section aria-labelledby="skills-h">
     <h2 id="skills-h"><span data-l="ja">得意な技術</span><span data-l="en">Skills</span></h2>
     <dl class="skills">
@@ -107,6 +126,7 @@
       <li><span class="label"><span data-l="ja">メール</span><span data-l="en">Email</span></span><a href="mailto:support@mydoai.com">support@mydoai.com</a></li>
       <li><span class="label">X</span><a href="https://x.com/YanaseHiroki">@YanaseHiroki</a></li>
       <li><span class="label">GitHub</span><a href="https://github.com/YanaseHiroki">YanaseHiroki</a></li>
+      <li><span class="label">note</span><a href="https://note.com/yanasehiroki">yanasehiroki</a></li>
     </ul>
   </section>
 
@@ -131,6 +151,86 @@
       apply(lang);
       try { localStorage.setItem("lang", lang); } catch (e) {}
     });
+  })();
+</script>
+<script>
+  // note の記事カード。notes.json を読んで横並びに描き、‹ › で1枚ずつ送る
+  (function () {
+    var list = document.getElementById("notes");
+    var nav = document.querySelector(".carousel-nav");
+    function el(tag, cls, text) {
+      var e = document.createElement(tag);
+      if (cls) e.className = cls;
+      if (text != null) e.textContent = text;
+      return e;
+    }
+    function both(ja, en) {
+      var f = document.createDocumentFragment();
+      var a = el("span", null, ja); a.setAttribute("data-l", "ja");
+      var b = el("span", null, en); b.setAttribute("data-l", "en");
+      f.appendChild(a); f.appendChild(b);
+      return f;
+    }
+    function card(n) {
+      var li = el("li", "note-card");
+      var a = el("a", "note-link"); a.href = n.url;
+      var fig = el("div", "thumb");
+      if (n.image) {
+        var img = el("img"); img.src = n.image; img.alt = ""; img.loading = "lazy";
+        img.width = 640; img.height = 335;
+        fig.appendChild(img);
+      } else {
+        fig.classList.add("thumb-plain");
+        fig.appendChild(el("span", "thumb-mark", "note"));
+      }
+      if (n.paid) { var p = el("span", "paid"); p.appendChild(both("有料", "Paid")); fig.appendChild(p); }
+      a.appendChild(fig);
+      var body = el("div", "note-body");
+      var d = new Date(n.date);
+      var time = el("time"); time.dateTime = n.date;
+      time.appendChild(both(
+        d.getFullYear() + "年" + (d.getMonth() + 1) + "月" + d.getDate() + "日",
+        d.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" })
+      ));
+      body.appendChild(time);
+      body.appendChild(el("h3", null, n.title));
+      if (n.excerpt) body.appendChild(el("p", "excerpt", n.excerpt));
+      if (n.tags && n.tags.length) {
+        var ul = el("ul", "tags");
+        n.tags.forEach(function (t) { ul.appendChild(el("li", null, t)); });
+        body.appendChild(ul);
+      }
+      a.appendChild(body);
+      li.appendChild(a);
+      return li;
+    }
+    function updateNav() {
+      var max = list.scrollWidth - list.clientWidth;
+      nav.hidden = max < 4;
+      nav.querySelector('[data-dir="-1"]').disabled = list.scrollLeft < 4;
+      nav.querySelector('[data-dir="1"]').disabled = list.scrollLeft > max - 4;
+    }
+    nav.addEventListener("click", function (e) {
+      var btn = e.target.closest(".nav-btn");
+      if (!btn) return;
+      var step = list.firstElementChild ? list.firstElementChild.getBoundingClientRect().width + 16 : list.clientWidth;
+      list.scrollBy({ left: step * Number(btn.dataset.dir), behavior: "smooth" });
+    });
+    list.addEventListener("scroll", updateNav, { passive: true });
+    window.addEventListener("resize", updateNav);
+    fetch("notes.json", { cache: "no-cache" })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function (data) {
+        list.textContent = "";
+        data.notes.forEach(function (n) { list.appendChild(card(n)); });
+        list.removeAttribute("aria-busy");
+        updateNav();
+      })
+      .catch(function () {
+        // 読めなければカード欄ごと畳み、下の「note で記事をすべて見る」だけ残す
+        list.remove();
+        nav.remove();
+      });
   })();
 </script>
 </body>

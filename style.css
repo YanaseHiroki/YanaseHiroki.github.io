@@ -126,3 +126,78 @@ h2::after {
 .contact a { overflow-wrap: anywhere; }
 
 .foot { color: var(--muted); font-size: 13px; padding-top: 24px; border-top: 1px solid var(--line); }
+
+/* note の記事カード。横に並べてスクロールで送る（スナップ付き） */
+.sec-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; }
+.sec-head h2 { flex: 1; }
+.carousel-nav { display: flex; gap: 8px; margin-bottom: 20px; }
+.carousel-nav[hidden] { display: none; }
+.nav-btn {
+  width: 36px; height: 36px; border-radius: 999px;
+  border: 1px solid var(--line); background: var(--surface); color: var(--ink);
+  font-size: 20px; line-height: 1; cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+.nav-btn:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
+.nav-btn:disabled { opacity: 0.35; cursor: default; }
+.nav-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.sec-note { margin: -8px 0 16px; color: var(--muted); font-size: 14px; }
+
+.notes {
+  list-style: none; margin: 0 -16px; padding: 4px 16px 12px;
+  display: grid; grid-auto-flow: column; grid-auto-columns: min(78%, 300px); gap: 16px;
+  overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding: 0 16px;
+  overscroll-behavior-x: contain; scrollbar-width: thin; scrollbar-color: var(--line) transparent;
+}
+.note-card { scroll-snap-align: start; display: flex; }
+.note-card.skeleton {
+  height: 320px; border-radius: 12px; border: 1px solid var(--line);
+  background: linear-gradient(90deg, var(--surface) 0%, var(--tag-bg) 50%, var(--surface) 100%);
+  background-size: 200% 100%; animation: shimmer 1.4s linear infinite;
+}
+@keyframes shimmer { to { background-position: -200% 0; } }
+.note-link {
+  display: flex; flex-direction: column; width: 100%;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+  overflow: hidden; color: inherit; text-decoration: none;
+  transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+.note-link:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 6px 18px rgb(0 0 0 / 0.08); }
+.note-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.thumb { position: relative; aspect-ratio: 1.91 / 1; background: var(--tag-bg); flex: none; overflow: hidden; }
+.thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+/* 見出し画像のない記事は、藍の地に青海波の模様と note の印を置く（題名は下に出るので重ねない） */
+.thumb-plain {
+  display: flex; align-items: flex-end; padding: 12px 16px;
+  background-color: #24476b;
+  background-image:
+    radial-gradient(circle at 50% 100%, transparent 38%, rgb(255 255 255 / 0.10) 39%, rgb(255 255 255 / 0.10) 44%, transparent 45%,
+      transparent 56%, rgb(255 255 255 / 0.10) 57%, rgb(255 255 255 / 0.10) 62%, transparent 63%),
+    linear-gradient(135deg, #24476b 0%, #3b6591 100%);
+  background-size: 48px 24px, 100% 100%;
+}
+.thumb-mark {
+  color: #f6f4ef; font: 700 13px/1 "Noto Sans JP", system-ui, sans-serif; letter-spacing: 0.08em;
+  padding: 4px 10px; border: 1px solid rgb(246 244 239 / 0.5); border-radius: 999px;
+}
+.paid {
+  position: absolute; top: 8px; right: 8px; padding: 1px 10px; border-radius: 999px;
+  background: rgb(0 0 0 / 0.6); color: #fff; font-size: 12px;
+}
+.note-body { padding: 14px 16px 16px; display: flex; flex-direction: column; flex: 1; }
+.note-body time { color: var(--muted); font-size: 12px; }
+.note-body h3 {
+  margin: 2px 0 8px; font-size: 15px; line-height: 1.55; font-family: var(--head-font);
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+}
+.note-link:hover h3 { color: var(--accent); }
+.excerpt {
+  margin: 0 0 12px; color: var(--muted); font-size: 13px; line-height: 1.7;
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+}
+.note-body .tags { margin: auto 0 0; }
+.more { margin: 8px 0 0; }
+@media (prefers-reduced-motion: reduce) {
+  .note-link, .note-card.skeleton { transition: none; animation: none; }
+  .note-link:hover { transform: none; }
+}

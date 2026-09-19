@@ -1,0 +1,53 @@
+{
+  "profile": "https://note.com/yanasehiroki",
+  "notes": [
+    {
+      "title": "LINEの問い合わせを、AIの返信案と店主の承認で回す ―― Shopifyのお店でのやり方",
+      "url": "https://note.com/yanasehiroki/n/n69450b4411ce",
+      "date": "2026-09-15T02:03:50.000Z",
+      "image": null,
+      "excerpt": "LINE公式アカウントで問い合わせを受けているShopifyのお店に向けて、「AIに返信案を作らせて、送る前に店主が確かめる」というやり方を、準備から毎日の回し方まで書きます。最初にお断りしておくと、私はこのやり方を形にしたShopify…",
+      "tags": [],
+      "paid": false
+    },
+    {
+      "title": "LINE の「返信」なのに reply API を使わない理由 — 承認を挟む返信は push になり、無料枠を 1 通使う",
+      "url": "https://note.com/yanasehiroki/n/nabfe31cb4219",
+      "date": "2026-09-09T09:20:01.000Z",
+      "image": null,
+      "excerpt": "「LINE からの問い合わせに“返信”するのだから reply API だろう」——素朴にはそう思います。でも、人の承認を挟む返信は reply API では送れません。",
+      "tags": [
+        "LINE",
+        "個人開発",
+        "shopify"
+      ],
+      "paid": false
+    },
+    {
+      "title": "LINE の商品カルーセルは文字数では収まらない — 50KB の壁をバイトで測って越える",
+      "url": "https://note.com/yanasehiroki/n/n65c16a8dcfc6",
+      "date": "2026-09-09T09:15:52.000Z",
+      "image": "https://assets.st-note.com/img/1788945259-iUZr8pNfJjXqIe1HVB4ERt0s.png",
+      "excerpt": "LINE で商品を紹介するとき、写真・商品名・価格・「商品を見る」ボタンが並んだ横スクロールのカード列を送れます。Flex Message の carousel、いわゆる商品カルーセルです。",
+      "tags": [
+        "LINE",
+        "個人開発",
+        "shopify"
+      ],
+      "paid": false
+    },
+    {
+      "title": "ClaudeにWebアプリを操作させると「iframeの中だけクリックが効かない」——原因（OOPIF）の特定と、3手で直す回避策",
+      "url": "https://note.com/yanasehiroki/n/n1b84bc29d397",
+      "date": "2026-08-05T16:23:58.000Z",
+      "image": "https://assets.st-note.com/production/uploads/images/300798171/rectangle_large_type_2_c238964627de24a837d856f1ffc1ae78.png?fit=bounds&quality=85&width=640",
+      "excerpt": "Claude（AI）にブラウザを操作させて、Webアプリの動作確認を任せる。便利ですが、Shopify管理画面のような「埋め込みiframeの中にアプリ本体がある」画面で、こんな経験はないでしょうか。 座標は合っている。スクリーンショット…",
+      "tags": [
+        "AI",
+        "Claude",
+        "ClaudeCode"
+      ],
+      "paid": true
+    }
+  ]
+}

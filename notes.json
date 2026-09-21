@@ -2,6 +2,19 @@
   "profile": "https://note.com/yanasehiroki",
   "notes": [
     {
+      "title": "CLAUDE.md に書いても守られない——Claude Code の実行前フック（PreToolUse）で危険な操作を機械的に止める運用と、誤発火を直した3日間",
+      "url": "https://note.com/yanasehiroki/n/n6601fef953a7",
+      "date": "2026-09-19T09:16:22.000Z",
+      "image": null,
+      "excerpt": "Claude Code を長く使っていると、必ずこの場面に来ます。 CLAUDE.md に「これはやるな」と書いたのに、やる。",
+      "tags": [
+        "ClaudeCode",
+        "個人開発",
+        "AI開発"
+      ],
+      "paid": true
+    },
+    {
       "title": "LINEの問い合わせを、AIの返信案と店主の承認で回す ―― Shopifyのお店でのやり方",
       "url": "https://note.com/yanasehiroki/n/n69450b4411ce",
       "date": "2026-09-15T02:03:50.000Z",

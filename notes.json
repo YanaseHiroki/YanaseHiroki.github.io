@@ -2,6 +2,19 @@
   "profile": "https://note.com/yanasehiroki",
   "notes": [
     {
+      "title": "Claude Code を7本の worktree で同時に回す——1セッション=1 worktree で1日40回 main に統合して壊れた4か所と、統合を1本のスクリプトに寄せた運用",
+      "url": "https://note.com/yanasehiroki/n/ned7f487da0ec",
+      "date": "2026-09-26T03:09:55.000Z",
+      "image": null,
+      "excerpt": "Claude Code を複数のセッションで同時に動かすとき、「git worktree を切ればいい」までは公式ドキュメントにも書いてあります。私もそこから始めました。 壊れたのは、その後です。",
+      "tags": [
+        "プログラミング",
+        "ClaudeCode",
+        "AI駆動開発"
+      ],
+      "paid": true
+    },
+    {
       "title": "CLAUDE.md に書いても守られない——Claude Code の実行前フック（PreToolUse）で危険な操作を機械的に止める運用と、誤発火を直した3日間",
       "url": "https://note.com/yanasehiroki/n/n6601fef953a7",
       "date": "2026-09-19T09:16:22.000Z",

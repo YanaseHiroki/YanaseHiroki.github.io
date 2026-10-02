@@ -191,6 +191,7 @@ h2::after {
 }
 .note-link:hover h3 { color: var(--accent); }
 .excerpt {
+  white-space: pre-line; /* 文末で改行（index.html で 。の後に \n を入れている） */
   margin: 0 0 12px; color: var(--muted); font-size: 13px; line-height: 1.7;
   display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
 }

@@ -2,6 +2,32 @@
   "profile": "https://note.com/yanasehiroki",
   "notes": [
     {
+      "title": "Dan Koeの「アンチビジョン」を1枚のワークシートにして、実際に1週間やってみた",
+      "url": "https://note.com/yanasehiroki/n/naefaedd1d89d",
+      "date": "2026-10-04T00:03:41.000Z",
+      "image": null,
+      "excerpt": "Dan Koeの「How to fix your entire life in 1 day」という記事を解説した動画を見て、やってみました。X上で1週間に1.6億回見られたと言われている記事で、「変えるべきは行動ではなくアイデンティティ」…",
+      "tags": [
+        "習慣化",
+        "ワークシート",
+        "DANKOE"
+      ],
+      "paid": false
+    },
+    {
+      "title": "Claude Code の Agent ツールは effort を上書きできない——だからサブエージェント定義を「モデル×effort」の5本に分けた。researcher 127回は読んだ4万字を3,500字で返していた（会話ログ338件の実測）",
+      "url": "https://note.com/yanasehiroki/n/n863bb5f8eea7",
+      "date": "2026-10-03T02:27:28.000Z",
+      "image": null,
+      "excerpt": "数字を先に置きます。 私の Claude Code の会話ログ（2026年9月11日〜10月3日）で、調べもの専用のサブエージェント `researcher` は 127回呼ばれ、1回あたり中央値で 40,154 字を読み、親のセッション…",
+      "tags": [
+        "AI",
+        "Claude",
+        "AIエージェント"
+      ],
+      "paid": true
+    },
+    {
       "title": "Claude Code を7本の worktree で同時に回す——1セッション=1 worktree で1日40回 main に統合して壊れた4か所と、統合を1本のスクリプトに寄せた運用",
       "url": "https://note.com/yanasehiroki/n/ned7f487da0ec",
       "date": "2026-09-26T03:09:55.000Z",
@@ -53,27 +79,19 @@
       "title": "LINE の商品カルーセルは文字数では収まらない — 50KB の壁をバイトで測って越える",
       "url": "https://note.com/yanasehiroki/n/n65c16a8dcfc6",
       "date": "2026-09-09T09:15:52.000Z",
-      "image": "https://assets.st-note.com/img/1788945259-iUZr8pNfJjXqIe1HVB4ERt0s.png",
+      "image": null,
       "excerpt": "LINE で商品を紹介するとき、写真・商品名・価格・「商品を見る」ボタンが並んだ横スクロールのカード列を送れます。Flex Message の carousel、いわゆる商品カルーセルです。",
-      "tags": [
-        "LINE",
-        "個人開発",
-        "shopify"
-      ],
+      "tags": [],
       "paid": false
     },
     {
       "title": "ClaudeにWebアプリを操作させると「iframeの中だけクリックが効かない」——原因（OOPIF）の特定と、3手で直す回避策",
       "url": "https://note.com/yanasehiroki/n/n1b84bc29d397",
       "date": "2026-08-05T16:23:58.000Z",
-      "image": "https://assets.st-note.com/production/uploads/images/300798171/rectangle_large_type_2_c238964627de24a837d856f1ffc1ae78.png?fit=bounds&quality=85&width=640",
+      "image": "https://assets.st-note.com/production/uploads/images/300798171/rectangle_large_type_2_c238964627de24a837d856f1ffc1ae78.png?width=800",
       "excerpt": "Claude（AI）にブラウザを操作させて、Webアプリの動作確認を任せる。便利ですが、Shopify管理画面のような「埋め込みiframeの中にアプリ本体がある」画面で、こんな経験はないでしょうか。 座標は合っている。スクリーンショット…",
-      "tags": [
-        "AI",
-        "Claude",
-        "ClaudeCode"
-      ],
-      "paid": true
+      "tags": [],
+      "paid": false
     }
   ]
 }

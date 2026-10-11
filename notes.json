@@ -2,6 +2,19 @@
   "profile": "https://note.com/yanasehiroki",
   "notes": [
     {
+      "title": "SKILL.md を削っても2週間で23%戻る——Claude Code が毎回読むファイルに 12,000 バイトの関門を置き、1.19MB の計画台帳を毎晩自動で痩せさせた",
+      "url": "https://note.com/yanasehiroki/n/nf76fe85e5df6",
+      "date": "2026-10-11T02:14:09.000Z",
+      "image": null,
+      "excerpt": "2026年9月13日に削った Claude Code のスキル定義（`SKILL.md`）は、2週間後の9月25日には 9,525 バイト → 11,696 バイト（23%増）に戻っていました。同じ時期、もう1本は 9,976 バイト →…",
+      "tags": [
+        "AI",
+        "Claude",
+        "プログラミング"
+      ],
+      "paid": true
+    },
+    {
       "title": "Dan Koeの「アンチビジョン」を1枚のワークシートにした（PDF配布）",
       "url": "https://note.com/yanasehiroki/n/naefaedd1d89d",
       "date": "2026-10-04T00:03:41.000Z",
@@ -19,7 +32,7 @@
       "url": "https://note.com/yanasehiroki/n/n863bb5f8eea7",
       "date": "2026-10-03T02:27:28.000Z",
       "image": null,
-      "excerpt": "数字を先に置きます。 私の Claude Code の会話ログ（2026年9月11日〜10月3日）で、調べもの専用のサブエージェント `researcher` は 127回呼ばれ、1回あたり中央値で 40,154 字を読み、親のセッション…",
+      "excerpt": "私の Claude Code の会話ログ（2026年9月11日〜10月3日）で、調べもの専用のサブエージェント `researcher` は 127回呼ばれ、1回あたり中央値で 40,154 字を読み、親のセッションには 3,512 字を…",
       "tags": [
         "AI",
         "Claude",
@@ -32,7 +45,7 @@
       "url": "https://note.com/yanasehiroki/n/ned7f487da0ec",
       "date": "2026-09-26T03:09:55.000Z",
       "image": null,
-      "excerpt": "Claude Code を複数のセッションで同時に動かすとき、「git worktree を切ればいい」までは公式ドキュメントにも書いてあります。私もそこから始めました。 壊れたのは、その後です。",
+      "excerpt": "Claude Code を複数のセッションで同時に動かすとき、「git worktree を切ればいい」までは公式ドキュメントにも書いてあります。私もそこから始めましたが、壊れたのはその後です。 worktree を切った翌日から、依存・…",
       "tags": [
         "プログラミング",
         "ClaudeCode",
@@ -45,7 +58,7 @@
       "url": "https://note.com/yanasehiroki/n/n6601fef953a7",
       "date": "2026-09-19T09:16:22.000Z",
       "image": null,
-      "excerpt": "Claude Code を長く使っていると、必ずこの場面に来ます。 CLAUDE.md に「これはやるな」と書いたのに、やる。",
+      "excerpt": "Claude Code を長く使っていると、いずれこうなります。 CLAUDE.md に「これはやるな」と書いたのに、Claude がやってしまう。",
       "tags": [
         "ClaudeCode",
         "個人開発",
@@ -58,7 +71,7 @@
       "url": "https://note.com/yanasehiroki/n/n69450b4411ce",
       "date": "2026-09-15T02:03:50.000Z",
       "image": null,
-      "excerpt": "LINE公式アカウントで問い合わせを受けているShopifyのお店に向けて、「AIに返信案を作らせて、送る前に店主が確かめる」というやり方を、準備から毎日の回し方まで書きます。最初にお断りしておくと、私はこのやり方を形にしたShopify…",
+      "excerpt": "私は、この記事で書くやり方を形にしたShopifyアプリ「MYDO（マイド）」を作っています。後半ではMYDOを例に説明しますが、考え方はどの道具を使っても同じです。",
       "tags": [],
       "paid": false
     },
@@ -67,12 +80,8 @@
       "url": "https://note.com/yanasehiroki/n/nabfe31cb4219",
       "date": "2026-09-09T09:20:01.000Z",
       "image": null,
-      "excerpt": "Shopify × LINE 連携の実装メモ｜受託のご相談用に、実装の一部を公開しています。記述は 2026 年 9 月時点の実装です（10 月 4 日に、スタンプの積み方の変更を追記しました）。 「LINE からの問い合わせに“返信”す…",
-      "tags": [
-        "LINE",
-        "個人開発",
-        "shopify"
-      ],
+      "excerpt": "Shopify × LINE 連携の実装メモ｜受託のご相談用に、実装の一部を公開しています。記述は 2026 年 9 月時点の実装です（10 月 4 日に、スタンプの積み方の変更を追記しました）。 LINE からの問い合わせに“返信”する…",
+      "tags": [],
       "paid": false
     },
     {
@@ -89,7 +98,7 @@
       "url": "https://note.com/yanasehiroki/n/n1b84bc29d397",
       "date": "2026-08-05T16:23:58.000Z",
       "image": "https://assets.st-note.com/production/uploads/images/300798171/rectangle_large_type_2_c238964627de24a837d856f1ffc1ae78.png?width=800",
-      "excerpt": "Claude（AI）にブラウザを操作させて、Webアプリの動作確認を任せる。便利ですが、Shopify管理画面のような「埋め込みiframeの中にアプリ本体がある」画面で、こんな経験はないでしょうか。 座標は合っている。スクリーンショット…",
+      "excerpt": "Claude（AI）にブラウザを操作させて、Webアプリの動作確認を任せる。便利ですが、Shopify管理画面のような「埋め込みiframeの中にアプリ本体がある」画面では、次のようなことが起きます。 座標は合っている。スクリーンショット…",
       "tags": [],
       "paid": false
     }

@@ -2,11 +2,11 @@
   "profile": "https://note.com/yanasehiroki",
   "notes": [
     {
-      "title": "Dan Koeの「アンチビジョン」を1枚のワークシートにして、実際に1週間やってみた",
+      "title": "Dan Koeの「アンチビジョン」を1枚のワークシートにした（PDF配布）",
       "url": "https://note.com/yanasehiroki/n/naefaedd1d89d",
       "date": "2026-10-04T00:03:41.000Z",
       "image": null,
-      "excerpt": "Dan Koeの「How to fix your entire life in 1 day」という記事を解説した動画を見て、やってみました。X上で1週間に1.6億回見られたと言われている記事で、「変えるべきは行動ではなくアイデンティティ」…",
+      "excerpt": "Dan Koeの「How to fix your entire life in 1 day」という記事を見て、やってみました。X上で1週間に1.6億回見られたと言われている記事で、「変えるべきは行動ではなくアイデンティティ」「理想を描く前…",
       "tags": [
         "習慣化",
         "ワークシート",
@@ -67,7 +67,7 @@
       "url": "https://note.com/yanasehiroki/n/nabfe31cb4219",
       "date": "2026-09-09T09:20:01.000Z",
       "image": null,
-      "excerpt": "「LINE からの問い合わせに“返信”するのだから reply API だろう」——素朴にはそう思います。でも、人の承認を挟む返信は reply API では送れません。",
+      "excerpt": "Shopify × LINE 連携の実装メモ｜受託のご相談用に、実装の一部を公開しています。記述は 2026 年 9 月時点の実装です（10 月 4 日に、スタンプの積み方の変更を追記しました）。 「LINE からの問い合わせに“返信”す…",
       "tags": [
         "LINE",
         "個人開発",
@@ -80,7 +80,7 @@
       "url": "https://note.com/yanasehiroki/n/n65c16a8dcfc6",
       "date": "2026-09-09T09:15:52.000Z",
       "image": null,
-      "excerpt": "LINE で商品を紹介するとき、写真・商品名・価格・「商品を見る」ボタンが並んだ横スクロールのカード列を送れます。Flex Message の carousel、いわゆる商品カルーセルです。",
+      "excerpt": "Shopify × LINE 連携の実装メモ｜受託のご相談用に、実装の一部を公開しています。記述は 2026 年 9 月時点の実装です。 LINE で商品を紹介するとき、写真・商品名・価格・「商品を見る」ボタンが並んだ横スクロールのカード…",
       "tags": [],
       "paid": false
     },

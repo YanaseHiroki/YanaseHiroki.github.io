@@ -2,6 +2,19 @@
   "profile": "https://note.com/yanasehiroki",
   "notes": [
     {
+      "title": "vitest run <file> は触っていないテストを回さない——CLAUDE.md の決まりを、コミットされたファイルそのものを裁く 82 本のテストにして、コミット前の 8 秒に置く",
+      "url": "https://note.com/yanasehiroki/n/na8c3b8f875ee",
+      "date": "2026-11-03T04:00:13.000Z",
+      "image": null,
+      "excerpt": "2026年9月27日の朝、週に1回回している「道具の見直し」のルーティンが、直近7日の push 前の関門（`scripts/local-ci.sh`。lint・型検査・テスト一式を回す、このリポジトリで唯一の品質ゲート）の失敗 18 件…",
+      "tags": [
+        "AI",
+        "Claude",
+        "AIエージェント"
+      ],
+      "paid": true
+    },
+    {
       "title": "SKILL.md を削っても2週間で23%戻る——Claude Code が毎回読むファイルに 12,000 バイトの関門を置き、1.19MB の計画台帳を毎晩自動で痩せさせた",
       "url": "https://note.com/yanasehiroki/n/nf76fe85e5df6",
       "date": "2026-10-11T02:14:09.000Z",
@@ -36,7 +49,7 @@
       "tags": [
         "AI",
         "Claude",
-        "ClaudeCode"
+        "AIエージェント"
       ],
       "paid": true
     },

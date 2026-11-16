@@ -2,6 +2,19 @@
   "profile": "https://note.com/yanasehiroki",
   "notes": [
     {
+      "title": "警告のまま4日放っておいたら、77件のうち61件が「項目なし」で溜まった——Claude Code が作った機能の動作確認項目を、同じコミットで台帳に足すまで push を止める関門",
+      "url": "https://note.com/yanasehiroki/n/nf350dec48a1f",
+      "date": "2026-11-15T10:12:31.000Z",
+      "image": null,
+      "excerpt": "2026年8月23日、24日、26日、27日、28日。毎晩2時に回している「変更確認」のルーティン（その日のコミットを読んで、決まりから外れたものを報告する Claude Code の定期実行）が、5回続けて同じ所見を出しました。",
+      "tags": [
+        "AI",
+        "Claude",
+        "AIエージェント"
+      ],
+      "paid": true
+    },
+    {
       "title": "vitest run <file> は触っていないテストを回さない——CLAUDE.md の決まりを、コミットされたファイルそのものを裁く 82 本のテストにして、コミット前の 8 秒に置く",
       "url": "https://note.com/yanasehiroki/n/na8c3b8f875ee",
       "date": "2026-11-03T04:00:13.000Z",
@@ -94,26 +107,38 @@
       "date": "2026-09-09T09:20:01.000Z",
       "image": null,
       "excerpt": "Shopify × LINE 連携の実装メモ｜受託のご相談用に、実装の一部を公開しています。記述は 2026 年 9 月時点の実装です（10 月 4 日に、スタンプの積み方の変更を追記しました）。 LINE からの問い合わせに“返信”する…",
-      "tags": [],
+      "tags": [
+        "LINE",
+        "個人開発",
+        "shopify"
+      ],
       "paid": false
     },
     {
       "title": "LINE の商品カルーセルは文字数では収まらない — 50KB の壁をバイトで測って越える",
       "url": "https://note.com/yanasehiroki/n/n65c16a8dcfc6",
       "date": "2026-09-09T09:15:52.000Z",
-      "image": null,
+      "image": "https://assets.st-note.com/img/1788945259-iUZr8pNfJjXqIe1HVB4ERt0s.png",
       "excerpt": "Shopify × LINE 連携の実装メモ｜受託のご相談用に、実装の一部を公開しています。記述は 2026 年 9 月時点の実装です。 LINE で商品を紹介するとき、写真・商品名・価格・「商品を見る」ボタンが並んだ横スクロールのカード…",
-      "tags": [],
+      "tags": [
+        "LINE",
+        "個人開発",
+        "shopify"
+      ],
       "paid": false
     },
     {
       "title": "ClaudeにWebアプリを操作させると「iframeの中だけクリックが効かない」——原因（OOPIF）の特定と、3手で直す回避策",
       "url": "https://note.com/yanasehiroki/n/n1b84bc29d397",
       "date": "2026-08-05T16:23:58.000Z",
-      "image": "https://assets.st-note.com/production/uploads/images/300798171/rectangle_large_type_2_c238964627de24a837d856f1ffc1ae78.png?width=800",
+      "image": "https://assets.st-note.com/production/uploads/images/300798171/rectangle_large_type_2_c238964627de24a837d856f1ffc1ae78.png?fit=bounds&quality=85&width=640",
       "excerpt": "Claude（AI）にブラウザを操作させて、Webアプリの動作確認を任せる。便利ですが、Shopify管理画面のような「埋め込みiframeの中にアプリ本体がある」画面では、次のようなことが起きます。 座標は合っている。スクリーンショット…",
-      "tags": [],
-      "paid": false
+      "tags": [
+        "AI",
+        "Claude",
+        "ClaudeCode"
+      ],
+      "paid": true
     }
   ]
 }

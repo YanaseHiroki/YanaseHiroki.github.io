@@ -50,11 +50,15 @@ async function fromRss() {
 
 async function enrich(notes) {
   try {
-    const res = await fetch(`https://note.com/api/v2/creators/${USER}/contents?kind=note&page=1`);
-    if (!res.ok) throw new Error(`API ${res.status}`);
-    const byUrl = new Map(
-      (await res.json()).data.contents.map((c) => [c.noteUrl, c]),
-    );
+    // 1ページは6件。1ページ目だけ読むと、7件目より古い記事のタグと「有料」の印が落ちる
+    const byUrl = new Map();
+    for (let page = 1; page <= 5; page++) {
+      const res = await fetch(`https://note.com/api/v2/creators/${USER}/contents?kind=note&page=${page}`);
+      if (!res.ok) throw new Error(`API ${res.status}`);
+      const { data } = await res.json();
+      for (const c of data.contents) byUrl.set(c.noteUrl, c);
+      if (data.isLastPage || byUrl.size >= MAX) break;
+    }
     for (const n of notes) {
       const c = byUrl.get(n.url);
       if (!c) continue;
